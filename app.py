@@ -10,5 +10,6 @@ def hello():
 if __name__ == '__main__':
     port = os.environ.get('FLASK_PORT') or 8080
     port = int(port)
-
-    app.run(port=port,host='0.0.0.0')
+    
+    app.run(ssl_context="adhoc")
+    # app.run(port=port,host='0.0.0.0')
